@@ -5,6 +5,8 @@ const AllProducts = () => {
 
     const [products, setProducts] = useState([])
 
+    const firmId = localStorage.getItem('firmId');
+
     const productHandler = async() =>{
         const firmId = localStorage.getItem('firmId')
         try {
@@ -43,6 +45,8 @@ const AllProducts = () => {
 
   return (
     <div className="all-products-container">
+        {firmId?
+        <>
         {products.length === 0? (<p className="no-products"> No Products Added</p>) : (
             <table className='all-products-table'>
                 <thead>
@@ -75,6 +79,8 @@ const AllProducts = () => {
                 </tbody>
             </table>
         )}
+        </>
+        :(<h1 style={{textAlign:'center', color:'red'}}>Select Firm To See Products</h1>)}
     </div>
   )
 }
