@@ -1,0 +1,82 @@
+.firmSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 89.5vh;
+    background-color: #f4f4f9;
+    
+    
+}
+
+.tableForm {
+    width: 400px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.productContainer h1{
+    text-align: center;
+}
+
+.tableForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.tableForm input[type="text"],
+.tableForm input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.tableForm input[type="text"]:focus,
+.tableForm input[type="file"]:focus {
+    border-color: #007bff;
+}
+
+.btnSubmit {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btnSubmit button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btnSubmit button:hover {
+    background-color: #0056b3;
+}
+
+.checkInp{
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.checkboxContainer{
+    padding: 3px;
+}
+.checkboxContainer input{
+    margin-left: 10px;
+}

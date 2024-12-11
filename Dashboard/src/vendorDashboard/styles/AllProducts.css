@@ -1,0 +1,91 @@
+/* Styling for the main container */
+.all-products-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    
+    width: 100%;
+}
+
+/* Styling for the message when no products are available */
+.all-products-container .no-products {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Styling for the product table */
+.all-products-container .all-products-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Styling for table headers */
+.all-products-container .all-products-table thead tr {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+}
+
+.all-products-container .all-products-table tbody tr {
+    text-align: center;
+}
+
+.all-products-container .all-products-table th, 
+.all-products-container .all-products-table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Styling for table rows */
+.all-products-container .all-products-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.all-products-container .all-products-table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Styling for the product image */
+.all-products-container .product-image {
+    max-width: 170px;
+    height:100px;
+    border-radius: 5px;
+}
+
+/* Styling for the Delete button */
+.all-products-container .delete-button {
+    padding: 8px 12px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.all-products-container .delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .all-products-container .all-products-table {
+        font-size: 14px;
+    }
+
+    .all-products-container .all-products-table th, 
+    .all-products-container .all-products-table td {
+        padding: 10px;
+    }
+
+    .all-products-container .product-image {
+        max-width: 80px;
+    }
+}
