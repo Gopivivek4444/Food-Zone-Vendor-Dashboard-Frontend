@@ -120,7 +120,7 @@ const LandingPage = () => {
             {showAddFirm && <AddFirm/>}
             {showAddProduct && <AddProduct/>}
             {showWelcome && <Welcome/>}
-            {showVendorFirms && <VendorFirms/>}
+            {showVendorFirms && <VendorFirms showAddProductHandler={showAddProductHandler}/>}
             {showAllProducts && <AllProducts/>}
           </div>
             

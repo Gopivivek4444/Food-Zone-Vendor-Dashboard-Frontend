@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { API_URL } from '../data/apiPath';
 import "../styles/VendorFirms.css";
 
-const VendorFirms = () => {
+const VendorFirms = ({showAddProductHandler}) => {
   const [vendorFirms, setVendorFirms] = useState([]);
   const [error, setError] = useState(null);
   const [vendorID, setVendorID] = useState("");
@@ -53,14 +53,20 @@ const VendorFirms = () => {
   return (
     <div className='vendorFirmsCollection'>
       <h2>Vendor Firms</h2>
+      <h3>Choose Any Firm To Add Products</h3>
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {vendorFirms.length > 0 ? (
         <ul>
           {vendorFirms.map((firm) => (
-            <li key={firm._id} onClick={() => setLocalStorageFirmIdHandler(firm._id,firm.firmName)}>
+        
+            <li key={firm._id} onClick={() => {
+                  setLocalStorageFirmIdHandler(firm._id,firm.firmName);
+                  showAddProductHandler();
+                }}>
               <strong>Firm ID:</strong> {firm._id} <br />
               <strong>Firm Name:</strong> {firm.firmName}
             </li>
+           
           ))}
         </ul>
       ) : (
