@@ -53,7 +53,7 @@ const VendorFirms = ({showAddProductHandler}) => {
   return (
     <div className='vendorFirmsCollection'>
       <h2>Vendor Firms</h2>
-      <h3>Choose Any Firm To Add Products</h3>
+      {vendorFirms.length>0 ?<h3>Choose Any Firm To Add Products</h3> :""}
       {error && <p style={{ color: 'red' }}>{error}</p>}
       {vendorFirms.length > 0 ? (
         <ul>
